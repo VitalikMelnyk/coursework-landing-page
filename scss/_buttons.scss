@@ -1,0 +1,17 @@
+//--------------- BUTTONS -----------
+.button-items {
+    margin: 40px 0;
+    .btn {
+      border-radius: 20px;
+      padding: 0.7rem 1.75rem;
+      text-transform: uppercase;
+      font-size: 14px;
+      transition: all 0.2s linear;
+    }
+    .btn-success {
+    }
+    .btn-light:hover {
+      // color: rgb(10, 184, 10);
+    }
+  }
+  

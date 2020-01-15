@@ -1,0 +1,78 @@
+// WHATWEDO
+.whatwedo {
+  background-color: rgb(250, 250, 250);
+  min-height: 700px;
+  padding-top: 70px;
+  .whatwedo-images {
+    position: relative;
+    .backimage {
+      display: block;
+      // position: absolute;
+
+      max-width: 400px;
+      max-height: 450px;
+      // background: url("../assets/img/business-template.jpg") center no-repeat;
+      // background-size: cover;
+      z-index: 1;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .frontimage {
+      position: absolute;
+      top: 200px;
+      right: -50px;
+      max-width: 400px;
+      max-height: 450px;
+      // background: url("../assets/img/website-template.jpg") center no-repeat;
+      // background-size: cover;
+      z-index: 2;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  // Adventages
+
+  .adventages {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+    &-item {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      i.fas {
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
+
+      &-title {
+        font-weight: 700;
+        color: black;
+        font-size: 18px;
+        &::after {
+          content: "";
+          margin: 15px 0;
+          display: block;
+          width: 30px;
+          height: 1px;
+          background-color: black;
+        }
+      }
+      &-text {
+        font: 300px;
+        margin-bottom: 20px;
+        padding: 0 15px 0 0;
+      }
+    }
+  }
+}

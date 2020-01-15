@@ -1,0 +1,79 @@
+.introduction {
+    overflow: hidden;
+    // background-color: royalblue;
+    position: relative;
+    min-height: 100vh;
+  
+    .container {
+      max-width: 1200px;
+    }
+    .header {
+      z-index: 100;
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-height: fit-content;
+      // background-color: white;
+      // padding: 15px 0;
+    }
+  
+    .navbar-logo {
+      max-width: 150px;
+      max-height: 80px;
+    }
+    &-inner {
+      min-height: 100vh;
+    }
+  }
+  
+  // SLICK SLIDER
+  
+  .slick-dotted.slick-slider {
+    margin-bottom: 0;
+  }
+  .slick-dots {
+    bottom: 20px;
+    li button:before {
+      font-size: 15px;
+    }
+  }
+  
+  .intro {
+    &-slider-item {
+      min-height: 100vh;
+    }
+    .first-slide {
+      background: url("../assets/img/window.jpg") center no-repeat;
+      background-size: cover;
+    }
+    .second-slide {
+      background: url("../assets/img/busy.jpg") center no-repeat;
+      background-size: cover;
+    }
+    .third-slide {
+      // background-color: red;
+      background: url("../assets/img/city.jpg") center no-repeat;
+      background-size: cover;
+    }
+    &-item {
+      color: white;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.3);
+      height: 100vh;
+      line-height: 1.2;
+    }
+    &-suptitle {
+      font-size: 40px;
+    }
+    &-title {
+      text-transform: uppercase;
+      font-size: 70px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    &-text {
+      font-size: 25px;
+    }
+  }
