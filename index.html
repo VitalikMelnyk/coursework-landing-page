@@ -252,8 +252,8 @@
       </div>
       <div class="row">
         <div class="col text-center" data-aos="fade-up">
-          <div id="works-images">
-            <a href="./assets/img/busy.jpg" class="works-images-link" >
+          <div id="works-images" class="works-images">
+            <a href="./assets/img/busy.jpg" class="works-images-link">
               <img src="./assets/img/busy.jpg" />
               <div class="overlay">
                 <i class="fas fa-search-plus"></i>
@@ -297,14 +297,123 @@
       </div>
     </div>
   </section>
-
-
-
   <!-- ----------------RECENT WORKS----------------- -->
+
+
+
+  <!-- ----------------------List group ----------------->
+
+
+  <section class="tabs">
+    <div id="tabs" class="">
+      <div class="tabs-nav-outer" data-aos="fade-down">
+        <div class="container">
+
+          <div class="row tabs-nav no-gutters">
+            <div class="col-4">
+
+              <a href="#" class="tabs-nav__link is-active">
+                <i class="fas fa-chart-line"></i>
+                <span>Core Value</span>
+              </a>
+            </div>
+            <div class="col-4">
+
+              <a href="#" class="tabs-nav__link">
+                <i class="fa fa-book"></i>
+                <span>Core Features</span>
+              </a>
+            </div>
+            <div class="col-4">
+
+              <a href="#" class="tabs-nav__link">
+                <i class="fa fa-heart"></i>
+                <span>company History</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="tab-outer">
+
+        <div class="container">
+          <div class="tab is-active">
+            <div class="row">
+              <div class="col-12 col-sm-6 " data-aos="fade-right">
+                <h2>Start your Business Today!
+                </h2>
+                <p>Home ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quo minus voluptate unde tempore
+                  eveniet
+                  consequuntur in, quod animi libero rem similique pariatur quos, et eum nisi ducimus, architecto
+                  voluptatibus!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aspernatur natus dolorem fuga cumque
+                  optio
+                  saepe corrupti earum. Ipsam quaerat asperiores similique omnis excepturi temporibus ab eum magnam
+                  ipsa,
+                  odio.</p>
+              </div>
+              <div class="col-12 col-sm-6  text-center" data-aos="fade-left">
+                <img src="./assets/img/business.jpg" alt="" class="tab-image">
+              </div>
+            </div>
+          </div>
+          <div class="tab ">
+            <div class="row">
+              <div class="col-12 col-sm-6 ">
+                <h2>Start your Business Today!
+                </h2>
+                <p>Home ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quo minus voluptate unde tempore
+                  eveniet
+                  consequuntur in, quod animi libero rem similique pariatur quos, et eum nisi ducimus, architecto
+                  voluptatibus!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aspernatur natus dolorem fuga cumque
+                  optio
+                  saepe corrupti earum. Ipsam quaerat asperiores similique omnis excepturi temporibus ab eum magnam
+                  ipsa,
+                  odio.</p>
+              </div>
+              <div class="col-12 col-sm-6  text-center">
+                <img src="./assets/img/busy.jpg" alt="" class="tab-image">
+              </div>
+            </div>
+          </div>
+          <div class="tab  ">
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <h2>Start your Business Today!
+                </h2>
+                <p>Home ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quo minus voluptate unde tempore
+                  eveniet
+                  consequuntur in, quod animi libero rem similique pariatur quos, et eum nisi ducimus, architecto
+                  voluptatibus!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aspernatur natus dolorem fuga cumque
+                  optio
+                  saepe corrupti earum. Ipsam quaerat asperiores similique omnis excepturi temporibus ab eum magnam
+                  ipsa,
+                  odio.</p>
+              </div>
+              <div class="col-12 col-sm-6 text-center">
+                <img src="./assets/img/about-us.jpg" alt="" class="tab-image">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- ----------------------List group ----------------->
+
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
   <script src="./node_modules/lightgallery.js/dist/js/lightgallery.js"></script>
   <script src="./node_modules/lg-fullscreen.js/dist/lg-fullscreen.min.js"></script>
   <script src="./node_modules/lg-thumbnail.js/dist/lg-thumbnail.min.js"></script>
-  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
   <script src="./node_modules/slick-slider/slick/slick.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
@@ -326,12 +435,21 @@
   </script>
   <script type="text/javascript">
     lightGallery(document.getElementById('works-images'), {
-      thumbnail:true,
-    animateThumb: true,
-    showThumbByDefault: false,
-    toggleThumb: true
+      thumbnail: true,
+      animateThumb: true,
+      showThumbByDefault: false,
+      toggleThumb: true
+    });
+  </script>
+  <script src="./js/tab/tabs.js"></script>
+  <script>
+    var myTabs = tabs({
+      el: '#tabs',
+      tabNavigationLinks: '.tabs-nav__link',
+      tabContentContainers: '.tab'
     });
 
+    myTabs.init();
   </script>
 </body>
 
