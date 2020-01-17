@@ -1,0 +1,66 @@
+.nav {
+    -webkit-box-shadow: 5px 4px 25px -6px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 5px 4px 25px -6px rgba(0, 0, 0, 1);
+    box-shadow: 5px 4px 25px -6px rgba(0, 0, 0, 1);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    //   background: rgba(95, 95, 95, 0.301);
+    padding: 15px 0 10px;
+    background-color: rgba(255, 255, 255, 0.075);
+    &-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      // position: relative;
+    }
+    &-logo {
+      img {
+        max-width: 150px;
+        max-height: 50px;
+      }
+    }
+    &-list {
+      display: none;
+      align-items: center;
+  
+      &-item {
+        display: flex;
+        margin-left: 35px;
+        font-size: 20px;
+  
+        a {
+          color: rgb(70, 70, 70);
+  
+          &::after {
+            content: "";
+            margin-top: 5px;
+            width: 0%;
+            height: 3px;
+            background: green;
+            display: block;
+            transition: all 0.3s ease;
+          }
+          &:hover {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            transition: all 0.3s ease;
+          }
+  
+          &:hover::after {
+            content: "";
+            width: 100%;
+            height: 3px;
+            background: green;
+            display: block;
+          }
+        }
+      }
+    }
+    .hamburger {
+      z-index: 100;
+      .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+          background: green;
+      }
+    }
+  }
