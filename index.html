@@ -16,6 +16,15 @@
 </head>
 
 <body>
+  <!-- Back to top button -->
+  <a class="backtotop-button">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Back to top button -->
+
+
+
   <!-- INTRODUCTION -->
   <section class="introduction">
     <!-- <div class="header">
@@ -144,14 +153,14 @@
   <section class="about">
     <div class="container">
       <div class="row">
-        <div class="col-4" data-aos="fade-right">
+        <div class="col-12 col-lg-4" data-aos="fade-right">
           <div class="background-image">
           </div>
           <div class="image">
             <img src="./assets/img/about-us.jpg" alt="">
           </div>
         </div>
-        <div class="col-8 ml-auto about-inner" data-aos="fade-left">
+        <div class="col-12 col-lg-8 ml-auto about-inner" data-aos="fade-left">
           <div class="general">
             <p class="general-suptitle">First your Should Know</p>
             <h1 class="general-title">About The <span>Studio</span></h1>
@@ -180,7 +189,7 @@
   <section class="whatwedo">
     <div class="container">
       <div class="row">
-        <div class="col-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        <div class="col-12 col-lg-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
           <div class="whatwedo-inner">
             <div class="general">
               <p class="general-suptitle">Making Awesome Designs
@@ -221,7 +230,7 @@
           </div>
 
         </div>
-        <div class="col-5" data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000">
+        <div class="col-12 col-lg-5" data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000">
           <div class="whatwedo-images">
 
             <div class="backimage">
@@ -531,7 +540,7 @@
                 <h4>Product Manager</h4>
               </div>
               <p>Neque porro quisqqui dolorem ipsum doamet, consectetur adipis civelit quianon.</p>
-              <div class="members-item-icons">
+              <div class=" members-item-icons ">
                 <a href="#">
                   <i class="fab fa-twitter"></i>
                 </a>
@@ -564,7 +573,50 @@
   <!-- ---------------Footer-------------------- -->
 
   <footer class="footer">
-    
+    <div class="container">
+      <div class="row" data-aos="fade-up">
+        <div class="col-12 col-sm-6  col-lg-4 footer-item">
+          <img src="./assets/img/logo.png" alt="" class="footer-logo">
+          <div class="footer-icons ">
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-pinterest-square"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-apple"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 contacts">
+          <h2 class="contacts-title">Contact</h2>
+          <div class="contacts-description">
+            <p>72 Royal Street, California USA</p>
+            <p>001-122-134-555</p>
+            <p>contact@domain.com</p>
+            <p>Email : abcd@mail.com</p>
+          </div>
+
+        </div>
+        <div class="col-12 col-sm-12 col-lg-4 contacts">
+          <h2 class="contacts-title">Newsletter</h2>
+          <div class="contacts-text">
+            <p>Subscribe to our newsletter for latest updates about our company.</p>
+          </div>
+          <input type="email" class="contacts-input" placeholder="Email address: ">
+        </div>
+      </div>
+    </div>
   </footer>
 
   <!-- ---------------Footer-------------------- -->
@@ -577,8 +629,26 @@
   <script src="./node_modules/lg-fullscreen.js/dist/lg-fullscreen.min.js"></script>
   <script src="./node_modules/lg-thumbnail.js/dist/lg-thumbnail.min.js"></script>
   <script src="./node_modules/slick-slider/slick/slick.min.js"></script>
+
   <script type="text/javascript">
+
     $(document).ready(function () {
+      let btn = $(".backtotop-button");
+      $(window).scroll(function () {
+        if ($(window).scrollTop() >= 1000) {
+          btn.addClass('show')
+        } else {
+          btn.removeClass('show');
+        }
+      });
+
+      btn.on('click', function (e) {
+        event.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, '300');
+      })
+
+
+
       $(".intro").slick({
         dots: true,
         infinite: true,
