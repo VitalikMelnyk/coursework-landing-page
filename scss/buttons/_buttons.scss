@@ -1,0 +1,52 @@
+//--------------- BUTTONS -----------
+.button-items {
+  margin: 40px 0;
+  
+  .btn {
+    border-radius: 20px;
+    padding: 0.7rem 1.75rem;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 0.2s linear;
+  }
+  .btn-success {
+  }
+  .btn-light:hover {
+    // color: rgb(10, 184, 10);
+  }
+}
+
+// BackButton
+.backtotop-button {
+  // display: flex;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: #6b6b6b;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  z-index: 1000;
+  right: 30px;
+  bottom: 150px;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  &:hover {
+    cursor: pointer;
+    background: #555454;
+  }
+  &:active {
+    background: #6d6a6a;
+  }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  i {
+    font-size: 30px;
+  }
+}
+

@@ -1,0 +1,111 @@
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  //   INTRO
+  .intro {
+    &-suptitle {
+      font-size: 18px;
+    }
+    &-title {
+      font-size: 35px;
+    }
+    &-description {
+      font-size: 14px;
+      padding: 0 5px;
+    }
+  }
+  // Menu drawer
+  .menu-drawer {
+    &-list {
+      li {
+        font-size: 25px;
+      }
+    }
+  }
+
+  //   NAV
+  .nav {
+    &-list {
+      display: none;
+    }
+    .hamburger {
+      display: flex;
+    }
+  }
+
+  //   GENERAL
+  .general {
+    text-align: center;
+    &-title {
+      font-size: 35px;
+    }
+  }
+
+  //   bUTTONS
+  .button-items {
+    .btn {
+      // text-align: center;
+      margin-bottom: 10px;
+      min-width: 180px;
+    }
+  }
+
+  // WHATWEDO / ADVENTAGES
+
+  .whatwedo {
+    &-images {
+      margin-top: 45px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      .frontimage {
+        position: static;
+      }
+    }
+
+    .adventages {
+      &-item {
+        text-align: center;
+
+        &-title {
+          &::after {
+            margin: 15px auto;
+          }
+        }
+
+        &-text {
+          padding: 0 50px;
+        }
+      }
+    }
+  }
+
+// Members
+.members {
+  &-item {
+    width: 70%;
+    margin: 0  auto 15px;
+  }
+}
+
+
+  // Footer 
+  .footer {
+
+    &-item {
+
+    }
+    .contacts {
+      // margin-bottom: 20px;
+      text-align: center;
+      &-text {
+        padding: 0 40px;
+      }
+      &-input {
+        margin: 0 auto;
+      }
+    }
+  }
+
+}

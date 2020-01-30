@@ -1,13 +1,21 @@
+
 .nav {
+  
     -webkit-box-shadow: 5px 4px 25px -6px rgba(0, 0, 0, 1);
     -moz-box-shadow: 5px 4px 25px -6px rgba(0, 0, 0, 1);
     box-shadow: 5px 4px 25px -6px rgba(0, 0, 0, 1);
-    position: fixed;
+    position: absolute;
     width: 100%;
     z-index: 10;
     //   background: rgba(95, 95, 95, 0.301);
     padding: 15px 0 10px;
     background-color: rgba(255, 255, 255, 0.075);
+    // display: none;
+    transition: all 0.7s linear;
+    &.fixed {
+      position: fixed;
+    }
+    
     &-inner {
       display: flex;
       flex-wrap: wrap;
@@ -21,7 +29,8 @@
       }
     }
     &-list {
-      display: none;
+      // display: none;
+      display: flex;
       align-items: center;
   
       &-item {
@@ -58,6 +67,7 @@
       }
     }
     .hamburger {
+      display: none;
       z-index: 100;
       .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
           background: green;

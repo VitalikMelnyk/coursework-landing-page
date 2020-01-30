@@ -1,0 +1,16 @@
+// About
+.about {
+  padding: 100px 0;
+  min-height: fit-content;
+  position: relative;
+
+  .image {
+    z-index: 100;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &-inner {
+  }
+}

@@ -1,15 +1,18 @@
 .members {
   min-height: 500px;
+  padding: 25px 0 50px;
   &-items-box {
     margin-top: 50px;
+    justify-content: center;
     // position: relative;
   }
   &-item {
-    width: inherit;
+    width: 100%;
     position: relative;
+    margin-bottom: 15px;
     &-img {
       // max-width: 400px;
-      width: inherit;
+      width: 100%;
       max-height: 300px;
       //   cursor: pointer;
     }

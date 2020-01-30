@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
+  <link rel="stylesheet" type="text/css" href="./node_modules/slick-slider/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="./node_modules/slick-slider/slick/slick.css" />
   <link rel="stylesheet" href="./node_modules/hamburgers/dist/hamburgers.min.css">
   <link rel="stylesheet" href="./node_modules/lightgallery.js/dist/css/lightgallery.min.css">
-  <link rel="stylesheet" type="text/css" href="./node_modules/slick-slider/slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="./node_modules/slick-slider/slick/slick-theme.css" />
-  <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
   <link rel="stylesheet" href="./css/style.css" />
   <title>Document</title>
 </head>
@@ -50,7 +50,7 @@
     <nav class="nav" data-aos="fade-down">
       <div class="container">
         <div class="row">
-          <div class="col nav-inner">
+          <div class="col-12 nav-inner">
 
             <a href="" class="nav-logo">
               <img src="./assets/img/cloud.png" alt="" class="">
@@ -107,8 +107,16 @@
                 </p>
               </div>
               <div class="col button-items" data-aos="fade-down" data-aos-duration="3000">
-                <a href="" class="btn btn-success">Discover now</a>
-                <a href="" class="btn btn-light">Contact us</a>
+                <div class="row">
+                  <div class="col-12 text-xs-center  col-sm-6 text-sm-right">
+
+                    <a href="" class="btn btn-success">Discover now</a>
+                  </div>
+                  <div class="col-12 text-xs-center col-sm-6 text text-sm-left">
+
+                    <a href="" class="btn btn-light">Contact us</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -130,9 +138,17 @@
                   variations to be made easily and without any coding.
                 </p>
               </div>
-              <div class="col button-items">
-                <a href="" class="btn btn-success">Discover now</a>
-                <a href="" class="btn btn-primary">Contact us</a>
+              <div class="col button-items" data-aos="fade-down" data-aos-duration="3000">
+                <div class="row">
+                  <div class="col-12 text-xs-center  col-sm-6 text-sm-right">
+
+                    <a href="" class="btn btn-success">Discover now</a>
+                  </div>
+                  <div class="col-12 text-xs-center col-sm-6 text text-sm-left">
+
+                    <a href="" class="btn btn-primary">Contact us</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -154,9 +170,17 @@
                   variations to be made easily and without any coding.
                 </p>
               </div>
-              <div class="col button-items">
-                <a href="" class="btn btn-success">Discover now</a>
-                <a href="" class="btn btn-danger">Contact us</a>
+              <div class="col button-items" data-aos="fade-down" data-aos-duration="3000">
+                <div class="row">
+                  <div class="col-12 text-xs-center  col-sm-6 text-sm-right">
+
+                    <a href="" class="btn btn-success">Discover now</a>
+                  </div>
+                  <div class="col-12 text-xs-center col-sm-6 text text-sm-left">
+
+                    <a href="" class="btn btn-danger">Contact us</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -170,15 +194,9 @@
   <!-- ----------- ABOUT------------------ -->
   <section class="about">
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-4" data-aos="fade-right">
-          <div class="background-image">
-          </div>
-          <div class="image">
-            <img src="./assets/img/about-us.jpg" alt="">
-          </div>
-        </div>
-        <div class="col-12 col-lg-8 ml-auto about-inner" data-aos="fade-left">
+      <div class="row align-items-center">
+        
+        <div class="col-12 col-lg-6 about-inner" data-aos="fade-right">
           <div class="general">
             <p class="general-suptitle">First your Should Know</p>
             <h1 class="general-title">About The <span>Studio</span></h1>
@@ -195,6 +213,13 @@
             </div>
           </div>
 
+        </div>
+        <div class="col-lg-6 mx-auto" data-aos="fade-left">
+          <!-- <div class="background-image">
+          </div> -->
+          <div class="image">
+            <img src="./assets/img/about-us.jpg" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -219,26 +244,26 @@
                 positioning the closest positioned parent box of the positioned ting that ments.
               </p>
             </div>
-            <div class="adventages">
-              <div class="adventages-item">
+            <div class="row adventages">
+              <div class="col-12 col-sm-6 adventages-item">
                 <i class="fas fa-biking"></i>
                 <h3 class="adventages-item-title">Design & Development</h3>
                 <p class="adventages-item-text">
                   Lorem ipsum dolor sit amet sea te alii viris mneo squer dipereum.</p>
               </div>
-              <div class="adventages-item">
+              <div class="col-12 col-sm-6 adventages-item">
                 <i class="fas fa-heartbeat"></i>
                 <h3 class="adventages-item-title">Creative Process</h3>
                 <p class="adventages-item-text">
                   Lorem ipsum dolor sit amet sea te alii viris mneo squer dipereum.</p>
               </div>
-              <div class="adventages-item">
+              <div class="col-12 col-sm-6 adventages-item">
                 <i class="fas fa-chart-line"></i>
                 <h3 class="adventages-item-title">Online Menegement</h3>
                 <p class="adventages-item-text">
                   Lorem ipsum dolor sit amet sea te alii viris mneo squer dipereum.</p>
               </div>
-              <div class="adventages-item">
+              <div class="col-12 col-sm-6 adventages-item">
                 <i class="fas fa-check-double"></i>
                 <h3 class="adventages-item-title">Friendly Support</h3>
                 <p class="adventages-item-text">
@@ -277,7 +302,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row no-gutters">
         <div class="col text-center" data-aos="fade-up">
           <div id="works-images" class="works-images">
             <a href="./assets/img/busy.jpg" class="works-images-link">
@@ -616,7 +641,7 @@
             </a>
           </div>
         </div>
-        <div class="col-12 col-sm-6 col-lg-4 contacts">
+        <div class="col-12 col-sm-6 col-lg-4  contacts">
           <h2 class="contacts-title">Contact</h2>
           <div class="contacts-description">
             <p>72 Royal Street, California USA</p>
@@ -642,17 +667,24 @@
 
 
   <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./node_modules/slick-slider/slick/slick.min.js"></script>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
   <script src="./node_modules/lightgallery.js/dist/js/lightgallery.js"></script>
   <script src="./node_modules/lg-fullscreen.js/dist/lg-fullscreen.min.js"></script>
   <script src="./node_modules/lg-thumbnail.js/dist/lg-thumbnail.min.js"></script>
-  <script src="./node_modules/slick-slider/slick/slick.min.js"></script>
 
   <script type="text/javascript">
     // BACK TO TOP OF PAGE
     $(document).ready(function () {
       let btn = $(".backtotop-button");
+      let nav = $('.nav');
       $(window).scroll(function () {
+        if($(window).scrollTop() >=720) {
+          nav.addClass('fixed');
+        }else {
+          nav.removeClass('fixed')
+        }
+
         if ($(window).scrollTop() >= 1000) {
           btn.addClass('show')
         } else {
@@ -678,17 +710,16 @@
         infinite: true,
         speed: 500,
         fade: true,
-        cssEase: "linear"
-        // autoplay: true,
+        cssEase: "linear",
+        arrows: false,
+
+        autoplay: true,
         // autoplaySpeed: 3000
       });
     });
   </script>
   <script src="./node_modules/aos/dist/aos.js"></script>
-  <script type="text/javascript">
-    AOS.init();
-
-  </script>
+  
   <script type="text/javascript">
     lightGallery(document.getElementById('works-images'), {
       thumbnail: true,
@@ -706,6 +737,14 @@
     });
 
     myTabs.init();
+  </script>
+  <script type="text/javascript">
+    AOS.init({
+      once: true, // whether animation should happen only once - while scrolling down
+    // mirror: true, // whether elements should animate out while scrolling past them
+    // startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+    });
+
   </script>
 </body>
 

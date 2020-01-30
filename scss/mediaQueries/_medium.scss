@@ -1,0 +1,47 @@
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  // INTRO
+  .intro {
+    &-suptitle {
+      font-size: 30px;
+    }
+    &-title {
+      font-size: 60px;
+    }
+    &-description {
+      padding: 0 55px;
+    }
+  }
+  //   NAV
+  .nav {
+    &-list {
+      display: none;
+    }
+    .hamburger {
+      display: flex;
+    }
+  }
+
+  // WHATWEDO / ADVENTAGES
+
+  .whatwedo {
+    
+    &-images {
+      margin-top: 45px;
+      display: flex;
+
+      .frontimage {
+        position: static;
+      }
+    }
+  }
+
+  .footer {
+
+    .contacts {
+      align-items: center;
+    }
+  }
+
+  
+}

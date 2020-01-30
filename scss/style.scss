@@ -1,22 +1,36 @@
 @import "./reset";
+* {
+  box-sizing: border-box;
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+}
 
-@import './navigatiton/nav';
+ body {
+  overflow-x: hidden;
+}
 
 
-@import "./introduction";
 
-@import "./buttons";
+@import "./navigatiton/nav";
 
-@import "./about";
+@import "./introduction/introduction";
 
-@import "./generalSettings";
+@import "./buttons/buttons";
 
-@import "./whatwedo";
+@import "./about/about";
 
-@import "./works";
+@import "./general/generalSettings";
 
-@import "./tabs";
+@import "./whatwedo/whatwedo";
 
-@import "./members";
+@import "./works/works";
 
-@import "./footer";
+@import "./tabs/tabs";
+
+@import "./members/members";
+
+@import "./footer/footer";
+
+@import "./mediaQueries/allmedia";

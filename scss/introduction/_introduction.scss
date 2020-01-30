@@ -1,5 +1,5 @@
 .introduction {
-    overflow: hidden;
+    // overflow: hidden;
     // background-color: royalblue;
     position: relative;
     min-height: 100vh;
@@ -7,16 +7,15 @@
     .container {
       max-width: 1200px;
     }
-    .navbar-logo {
-      max-width: 150px;
-      max-height: 80px;
-    }
     &-inner {
       min-height: 100vh;
     }
   }
   
   // SLICK SLIDER
+  .slick-initialized {
+    overflow: hidden;
+  }
   
   .slick-dotted.slick-slider {
     margin-bottom: 0;
@@ -26,6 +25,9 @@
     li button:before {
       font-size: 15px;
     }
+  }
+  .slick-prev, .slick-next {
+    display: none;
   }
   
   .intro {
@@ -37,12 +39,12 @@
       background-size: cover;
     }
     .second-slide {
-      background: url("../assets/img/busy.jpg") center no-repeat;
+      background: url("../assets/img/national.jpg") center no-repeat;
       background-size: cover;
     }
     .third-slide {
       // background-color: red;
-      background: url("../assets/img/city.jpg") center no-repeat;
+      background: url("../assets/img/cnu.jpg") center no-repeat;
       background-size: cover;
     }
     &-item {
@@ -63,7 +65,7 @@
       font-weight: 800;
       margin-bottom: 20px;
     }
-    &-text {
-      font-size: 25px;
+    &-description {
+      font-size: 18px;
     }
   }

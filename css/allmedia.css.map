@@ -1,0 +1,14 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/about/mediaqueries/allmedia.scss",
+        "../scss/about/mediaqueries/_extralarge.scss",
+        "../scss/about/mediaqueries/_small.scss",
+        "../scss/about/mediaqueries/_medium.scss",
+        "../scss/about/mediaqueries/_large.scss",
+        "../scss/about/mediaqueries/_extralarge.scss"
+    ],
+    "names": [],
+    "file": "allmedia.css"
+}

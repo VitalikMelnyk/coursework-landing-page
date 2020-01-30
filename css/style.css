@@ -48,14 +48,34 @@ table {
   border-spacing: 0;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 .nav {
   -webkit-box-shadow: 5px 4px 25px -6px black;
   box-shadow: 5px 4px 25px -6px black;
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 10;
   padding: 15px 0 10px;
   background-color: rgba(255, 255, 255, 0.075);
+  -webkit-transition: all 0.7s linear;
+  transition: all 0.7s linear;
+}
+
+.nav.fixed {
+  position: fixed;
 }
 
 .nav-inner {
@@ -75,7 +95,9 @@ table {
 }
 
 .nav-list {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -120,6 +142,7 @@ table {
 }
 
 .nav .hamburger {
+  display: none;
   z-index: 100;
 }
 
@@ -203,7 +226,6 @@ table {
 }
 
 .introduction {
-  overflow: hidden;
   position: relative;
   min-height: 100vh;
 }
@@ -212,13 +234,12 @@ table {
   max-width: 1200px;
 }
 
-.introduction .navbar-logo {
-  max-width: 150px;
-  max-height: 80px;
-}
-
 .introduction-inner {
   min-height: 100vh;
+}
+
+.slick-initialized {
+  overflow: hidden;
 }
 
 .slick-dotted.slick-slider {
@@ -233,6 +254,10 @@ table {
   font-size: 15px;
 }
 
+.slick-prev, .slick-next {
+  display: none;
+}
+
 .intro-slider-item {
   min-height: 100vh;
 }
@@ -243,12 +268,12 @@ table {
 }
 
 .intro .second-slide {
-  background: url("../assets/img/busy.jpg") center no-repeat;
+  background: url("../assets/img/national.jpg") center no-repeat;
   background-size: cover;
 }
 
 .intro .third-slide {
-  background: url("../assets/img/city.jpg") center no-repeat;
+  background: url("../assets/img/cnu.jpg") center no-repeat;
   background-size: cover;
 }
 
@@ -277,8 +302,8 @@ table {
   margin-bottom: 20px;
 }
 
-.intro-text {
-  font-size: 25px;
+.intro-description {
+  font-size: 18px;
 }
 
 .button-items {
@@ -295,9 +320,7 @@ table {
 }
 
 .backtotop-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -338,44 +361,20 @@ table {
 }
 
 .about {
-  margin-bottom: 100px;
+  padding: 100px 0;
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
   position: relative;
 }
 
-.about .background-image {
-  position: absolute;
-  top: -100px;
-  left: -15px;
-  min-width: 400px;
-  min-height: 450px;
-  background-color: #fafafa;
-  z-index: 1;
-}
-
 .about .image {
-  position: absolute;
-  top: -70px;
-  width: 400px;
-  height: 450px;
-  background: url("../assets/img/about-us.jpg") center no-repeat;
-  background-size: cover;
   z-index: 100;
 }
 
 .about .image img {
   display: block;
   width: 100%;
-}
-
-.about-inner {
-  margin-left: 130px;
-}
-
-.about-inner .general {
-  padding: 100px 50px 0;
 }
 
 .general-suptitle {
@@ -413,24 +412,23 @@ table {
   padding-top: 70px;
 }
 
-.whatwedo .whatwedo-images {
+.whatwedo-images {
   position: relative;
 }
 
-.whatwedo .whatwedo-images .backimage {
+.whatwedo-images .backimage {
   display: block;
   max-width: 400px;
   max-height: 450px;
   z-index: 1;
 }
 
-.whatwedo .whatwedo-images .backimage img {
+.whatwedo-images .backimage img {
   display: block;
   width: 100%;
-  height: 100%;
 }
 
-.whatwedo .whatwedo-images .frontimage {
+.whatwedo-images .frontimage {
   position: absolute;
   top: 200px;
   right: -50px;
@@ -439,7 +437,7 @@ table {
   z-index: 2;
 }
 
-.whatwedo .whatwedo-images .frontimage img {
+.whatwedo-images .frontimage img {
   display: block;
   width: 100%;
   height: 100%;
@@ -455,16 +453,7 @@ table {
 }
 
 .whatwedo .adventages-item {
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  margin: 10px 0;
 }
 
 .whatwedo .adventages-item i.fas {
@@ -505,11 +494,19 @@ table {
 }
 
 .works-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 50px;
 }
 
 .works-images-link {
-  display: inline-block;
+  margin: 3px;
   position: relative;
 }
 
@@ -663,19 +660,24 @@ tabs-nav {
 
 .members {
   min-height: 500px;
+  padding: 25px 0 50px;
 }
 
 .members-items-box {
   margin-top: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .members-item {
-  width: inherit;
+  width: 100%;
   position: relative;
+  margin-bottom: 15px;
 }
 
 .members-item-img {
-  width: inherit;
+  width: 100%;
   max-height: 300px;
 }
 
@@ -777,6 +779,7 @@ tabs-nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 20px;
 }
 
 .footer-logo {
@@ -828,6 +831,7 @@ tabs-nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 20px;
 }
 
 .footer .contacts-title {
@@ -856,5 +860,149 @@ tabs-nav {
   border-radius: 20px;
   padding: 10px 10px;
   color: #6b6b6b;
+}
+
+@media (max-width: 575.98px) {
+  .intro-suptitle {
+    font-size: 18px;
+  }
+  .intro-title {
+    font-size: 35px;
+  }
+  .intro-description {
+    font-size: 14px;
+    padding: 0 5px;
+  }
+  .menu-drawer-list li {
+    font-size: 25px;
+  }
+  .nav-list {
+    display: none;
+  }
+  .nav .hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .general {
+    text-align: center;
+  }
+  .general-title {
+    font-size: 35px;
+  }
+  .button-items .btn {
+    margin-bottom: 10px;
+    min-width: 180px;
+  }
+  .whatwedo-images {
+    margin-top: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .whatwedo-images .frontimage {
+    position: static;
+  }
+  .whatwedo .adventages-item {
+    text-align: center;
+  }
+  .whatwedo .adventages-item-title::after {
+    margin: 15px auto;
+  }
+  .whatwedo .adventages-item-text {
+    padding: 0 50px;
+  }
+  .members-item {
+    width: 70%;
+    margin: 0  auto 15px;
+  }
+  .footer .contacts {
+    text-align: center;
+  }
+  .footer .contacts-text {
+    padding: 0 40px;
+  }
+  .footer .contacts-input {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .intro-suptitle {
+    font-size: 25px;
+  }
+  .intro-title {
+    font-size: 55px;
+  }
+  .intro-description {
+    padding: 0 45px;
+  }
+  .nav-list {
+    display: none;
+  }
+  .nav .hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .whatwedo-images {
+    margin-top: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .whatwedo-images .frontimage {
+    position: static;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .intro-suptitle {
+    font-size: 30px;
+  }
+  .intro-title {
+    font-size: 60px;
+  }
+  .intro-description {
+    padding: 0 55px;
+  }
+  .nav-list {
+    display: none;
+  }
+  .nav .hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .whatwedo-images {
+    margin-top: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .whatwedo-images .frontimage {
+    position: static;
+  }
+  .footer .contacts {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

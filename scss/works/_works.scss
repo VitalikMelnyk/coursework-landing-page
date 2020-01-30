@@ -1,0 +1,58 @@
+// Works
+
+.works {
+  min-height: fit-content;
+  padding-bottom: 50px;
+
+  .general {
+    padding-top: 70px;
+  }
+
+  &-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: 50px;
+    &-link {
+      margin: 3px ;
+      position: relative;
+      .overlay {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.2s linear;
+
+        z-index: 100;
+
+        i.fas::before {
+          font-size: 30px;
+          color: #8bc34a;
+        }
+      }
+      &:hover .overlay {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.6);
+        transform: scale3d(1.2, 1.2, 1.2);
+      }
+      &:hover img {
+        transform: scale3d(1.2, 1.2, 1.2);
+        z-index: 100;
+      }
+      img {
+        width: 300px;
+        height: 200px;
+        position: relative;
+        transform: scale3d(1, 1, 1);
+        transition: transform 0.2s linear;
+      }
+    }
+  }
+}
+
